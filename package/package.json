@@ -1,0 +1,32 @@
+{
+  "name": "node-secret-codes",
+  "version": "1.0.0",
+  "description": "This package provides a command-line interface (CLI) tool designed to facilitate the creation of cheat codes for games or other applications. Inspired by features like YouTube's ability to trigger special effects by typing specific keywords (e.g., typing \"awesome\" to activate a rainbow video progress bar), this tool allows developers to implement similar functionality in their projects. By detecting specific sequences of keystrokes, users can trigger predefined actions or effects within their applications, enhancing user experience and adding an element of interactivity.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PinkQween/node-secret-codes.git"
+  },
+  "keywords": [
+    "nodejs",
+    "node",
+    "bun",
+    "scripting",
+    "secret",
+    "codes",
+    "cheat",
+    "codes",
+    "dev",
+    "tool",
+    "utilities"
+  ],
+  "author": "PinkQween (Hanna Skairipa)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PinkQween/node-secret-codes/issues"
+  },
+  "homepage": "https://github.com/PinkQween/node-secret-codes#readme",
+  "dependencies": {
+    "readline": "^1.3.0"
+  }
+}
