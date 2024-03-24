@@ -32,7 +32,8 @@ const useCode = (code, callback) => {
 
     process.stdin.on('keypress', (_, key) => {
         if (key && key.name !== 'return' && key.name !== 'escape') {
-            codeListener(key.name);
+            if (key.name) codeListener(key.name);
+            else (codeListener(key.sequence));
         }
     });
 }
@@ -54,7 +55,7 @@ const useTimeSensitiveCodeWithTimeout = (code, callback, timeout) => {
     };
 
     const codeListener = (key) => {
-        const typed = key.toLowerCase();
+        const typed = key.toLowerCase() ? key.toLowerCase() : key;
         const newTypedCode = typedCode + typed;
 
         if (newTypedCode === code.substr(0, newTypedCode.length)) {
@@ -77,7 +78,8 @@ const useTimeSensitiveCodeWithTimeout = (code, callback, timeout) => {
 
     process.stdin.on('keypress', (_, key) => {
         if (key && key.name !== 'return' && key.name !== 'escape') {
-            codeListener(key.name);
+            if (key.name) codeListener(key.name);
+            else (codeListener(key.sequence));
         }
     });
 }
@@ -95,7 +97,7 @@ const useTimeSensitiveCodeEachCharacter = (code, callback, timeoutPerCharacter) 
     const codeListener = (key) => {
         clearTimeout(timeoutId);
 
-        const typed = key.toLowerCase();
+        const typed = key.toLowerCase() ? key.toLowerCase() : key;
         const newTypedCode = typedCode + typed;
 
         if (newTypedCode === code.substr(0, newTypedCode.length)) {
@@ -121,7 +123,8 @@ const useTimeSensitiveCodeEachCharacter = (code, callback, timeoutPerCharacter) 
 
     process.stdin.on('keypress', (_, key) => {
         if (key && key.name !== 'return' && key.name !== 'escape') {
-            codeListener(key.name);
+            if (key.name) codeListener(key.name);
+            else (codeListener(key.sequence));
         }
     });
 }
@@ -147,7 +150,7 @@ const useCombinedTimeSensitiveCode = (code, callback, timeoutPerCharacter, overa
     const codeListener = (key) => {
         clearTimeout(timeoutId);
 
-        const typed = key.toLowerCase();
+        const typed = key.toLowerCase() ? key.toLowerCase() : key;
         const newTypedCode = typedCode + typed;
 
         if (newTypedCode === code.substr(0, newTypedCode.length)) {
@@ -173,7 +176,8 @@ const useCombinedTimeSensitiveCode = (code, callback, timeoutPerCharacter, overa
 
     process.stdin.on('keypress', (_, key) => {
         if (key && key.name !== 'return' && key.name !== 'escape') {
-            codeListener(key.name);
+            if (key.name) codeListener(key.name);
+            else (codeListener(key.sequence));
         }
     });
 
