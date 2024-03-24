@@ -1,5 +1,6 @@
 // const readline = require('readline');
-import readline from 'readline';
+// import readline from 'readline';
+const readline = require('readline');
 
 /**
  * Command-line tool to detect a specific code sequence typed by the user.
@@ -181,9 +182,16 @@ const useCombinedTimeSensitiveCode = (code, callback, timeoutPerCharacter, overa
     }, overallTimeout);
 }
 
-export default useCode;
+// export default useCode;
 
-export {
+// export {
+//     useTimeSensitiveCodeWithTimeout,
+//     useTimeSensitiveCodeEachCharacter,
+//     useCombinedTimeSensitiveCode
+// }
+
+module.exports = {
+    useCode,
     useTimeSensitiveCodeWithTimeout,
     useTimeSensitiveCodeEachCharacter,
     useCombinedTimeSensitiveCode
