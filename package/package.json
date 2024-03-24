@@ -1,6 +1,6 @@
 {
   "name": "node-secret-codes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This package provides a command-line interface (CLI) tool designed to facilitate the creation of cheat codes for games or other applications. Inspired by features like YouTube's ability to trigger special effects by typing specific keywords (e.g., typing \"awesome\" to activate a rainbow video progress bar), this tool allows developers to implement similar functionality in their projects. By detecting specific sequences of keystrokes, users can trigger predefined actions or effects within their applications, enhancing user experience and adding an element of interactivity.",
   "main": "index.js",
   "repository": {
